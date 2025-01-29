@@ -1,0 +1,34 @@
+{
+  "name": "matero",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test --project=chromium --trace=on",
+    "allure": "npx allure generate ./allure-results && allure open",
+    "eslint": "eslint .",
+    "lint": "prettier --check .",
+    "format": "prettier --write ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*": "prettier --write"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.49.1",
+    "@types/js-yaml": "^4.0.9",
+    "@types/node": "^22.12.0",
+    "js-yaml": "^4.1.0",
+    "prettier": "^3.4.2"
+  },
+  "dependencies": {
+    "husky": "^9.1.7"
+  }
+}

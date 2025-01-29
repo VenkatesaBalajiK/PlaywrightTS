@@ -1,0 +1,34 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "ES6",
+    "module": "commonjs",
+    "outDir": "./out",
+    "rootDir": "./",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@api/*": ["api/*"],
+      "@api/models/request-models/*": ["api/models/request-models/*"],
+      "@api/models/response-models/*": ["api/models/response-models/*"],
+      "@api/services/*": ["api/services/*"],
+      "@configs/*": ["configs/*"],
+      "@database/*": ["database/*"],
+      "@factories/*": ["factories/*"],
+      "@fixtures/*": ["fixtures/*"],
+      "@setup/*": ["setup/*"],
+      "@ui/locators/*": ["ui/locators/*"],
+      "@ui/pages/*": ["ui/pages/*"],
+      "@ui/page-steps/*": ["ui/page-steps/*"],
+      "@utils/*": ["utils/*"],
+      "@utils/file-utils/*": ["utils/file-utils/*"],
+      "@utils/nflows-utils/*": ["utils/nflows-utils/*"],
+      "@utils/playwright-utils/*": ["utils/playwright-utils/*"],
+      "@test-data/*": ["test-data/*"],
+      "@test-reports/*": ["test-reports/*"],
+      "@test-results/*": ["test-results/*"],
+      "@tests/*": ["tests/*"]
+    }
+  }
+}

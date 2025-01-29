@@ -1,0 +1,48 @@
+# Environment Configuration
+# This YAML file maintains environment-specific configurations.
+# DO NOT store sensitive data (e.g., passwords, API keys) directly in this file without encryption.
+
+environments:
+  qa:
+    app_url: "http://192.168.1.34/nFlows/login/login.jsp"
+    database:
+      host: "http://192.168.1.34:9687"
+      port: 9474
+      username: "dev_user"
+      password: "${DB_PASSWORD}" # Injected via environment variable
+    import_api:
+      base_url: "http://13.214.8.142"
+      port: 8081
+      endpoints:
+        generate-token: "/nFlowsDataEngine/v3/authentication/generateToken"
+        upload: "/nFlowsDataEngine/v3/dataload/upload"
+        process-status: "/nFlowsExportAPI/v2/exportApi/process/status/IMPORT"
+    export_api:
+      base_url: "http://13.214.8.142"
+      port: 8083
+      endpoints:
+        generate-token: "/nFlowsExportAPI/v2/exportApi/generateToken"
+        export: "/nFlowsExportAPI/v2/exportApi"
+        process-status: "/nFlowsExportAPI/v2/exportApi/process/status/EXPORT"
+
+  demo:
+    app_url: "http://192.168.1.34/nFlows/login/login.jsp"
+    database:
+      host: "http://192.168.1.34:9687"
+      port: 9474
+      username: "dev_user"
+      password: "${DB_PASSWORD}" # Injected via environment variable
+    import_api:
+      base_url: "http://13.214.8.142"
+      port: 8081
+      endpoints:
+        generate-token: "/nFlowsDataEngine/v3/authentication/generateToken"
+        upload: "/nFlowsDataEngine/v3/dataload/upload"
+        process-status: "/nFlowsExportAPI/v2/exportApi/process/status/IMPORT"
+    export_api:
+      base_url: "http://13.214.8.142"
+      port: 8083
+      endpoints:
+        generate-token: "/nFlowsExportAPI/v2/exportApi/generateToken"
+        export: "/nFlowsExportAPI/v2/exportApi"
+        process-status: "/nFlowsExportAPI/v2/exportApi/process/status/EXPORT"
